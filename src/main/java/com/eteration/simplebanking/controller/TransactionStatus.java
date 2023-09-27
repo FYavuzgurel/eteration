@@ -5,7 +5,9 @@ package com.eteration.simplebanking.controller;
 
 public class TransactionStatus {
 
-    private  String status;
+    private String approvalCode;
+
+    private String status;
 
     public TransactionStatus(String status) {
         this.status = status;
@@ -17,5 +19,13 @@ public class TransactionStatus {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getApprovalCode() {
+        return approvalCode;
+    }
+
+    public void setApprovalCode(String approvalCode) {
+        this.approvalCode = approvalCode;
     }
 }
