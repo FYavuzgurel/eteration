@@ -13,6 +13,11 @@ public class TransactionStatus {
         this.status = status;
     }
 
+    public TransactionStatus(String status,String approvalCode) {
+        this.status = status;
+        this.approvalCode=approvalCode;
+    }
+
     public String getStatus() {
         return status;
     }

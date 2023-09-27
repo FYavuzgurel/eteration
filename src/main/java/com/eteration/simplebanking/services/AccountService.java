@@ -29,6 +29,13 @@ public class AccountService {
     }
 
     public Account save(Account account) {
+        if(accountRepository.findAccountByAccountNumber(account.getAccountNumber()).isPresent()){
+            throw new RuntimeException("Bu hesap numarasına sahip bir hesap zaten mevcut.");
+        }
+        return accountRepository.save(account);
+    }
+
+    public Account update(Account account) {
         return accountRepository.save(account);
     }
 

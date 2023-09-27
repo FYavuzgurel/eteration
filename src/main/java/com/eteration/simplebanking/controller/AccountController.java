@@ -49,7 +49,7 @@ public class AccountController {
         try {
             Account account = accountService.findAccount(accountNumber);
             TransactionStatus status = account.post(transaction);
-            accountService.save(account);
+            accountService.update(account);
             status.setApprovalCode(transaction.getApprovalCode());
             return ResponseEntity.ok(status);
         } catch (AccountNotFoundException exception) {

@@ -65,7 +65,7 @@ public class Account {
         }
         transaction.setAccount(this);
         transactions.add(transaction);
-        return new TransactionStatus("OK");
+        return new TransactionStatus("OK",transaction.getApprovalCode());
     }
 
     public void deposit(double amount) {
